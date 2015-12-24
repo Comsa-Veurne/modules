@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+    <Backend>
+        <Media>
+            <item type="label" name="SelectedAllImages">
+                <translation language="nl"><![CDATA[Selecteer alle afbeeldingen]]></translation>
+                <translation language="en"><![CDATA[Select all images]]></translation>
+            </item>
+            <item type="label" name="DeleteSelectedFiles">
+                <translation language="nl"><![CDATA[Geselecteerde bestanden verwijderen]]></translation>
+                <translation language="en"><![CDATA[Delete selected files]]></translation>
+            </item>
+        </Media>
+        <Core>
+            <item type="label" name="Media">
+                <translation language="nl"><![CDATA[Media]]></translation>
+                <translation language="en"><![CDATA[Media]]></translation>
+            </item>
+            <item type="label" name="DeleteImage">
+                <translation language="nl"><![CDATA[verwijder afbeelding]]></translation>
+                <translation language="en"><![CDATA[delete image]]></translation>
+            </item>
+            <item type="label" name="ChooseImages">
+                <translation language="nl"><![CDATA[kies afbeeldingen]]></translation>
+                <translation language="en"><![CDATA[choose images]]></translation>
+            </item>
+            <item type="label" name="SearchFiles">
+                <translation language="nl"><![CDATA[Zoeken]]></translation>
+                <translation language="en"><![CDATA[Search]]></translation>
+            </item>
+            <item type="label" name="Files">
+                <translation language="nl"><![CDATA[Bestanden]]></translation>
+                <translation language="en"><![CDATA[Files]]></translation>
+            </item>
+            <item type="label" name="AddLinks">
+                <translation language="nl"><![CDATA[Links toevoegen]]></translation>
+                <translation language="en"><![CDATA[Add links]]></translation>
+            </item>
+            <item type="label" name="AddLink">
+                <translation language="nl"><![CDATA[Link toevoegen]]></translation>
+                <translation language="en"><![CDATA[Add link]]></translation>
+            </item>
+            <item type="label" name="DeleteSelected">
+                <translation language="nl"><![CDATA[Geselecteerde verwijderen]]></translation>
+                <translation language="en"><![CDATA[Delete selected]]></translation>
+            </item>
+            <item type="label" name="SelectedAll">
+                <translation language="nl"><![CDATA[Alle selecteren]]></translation>
+                <translation language="en"><![CDATA[Select all]]></translation>
+            </item>
+            <item type="message" name="Added">
+                <translation language="nl"><![CDATA[de afbeelding werd toegevoegd]]></translation>
+                <translation language="en"><![CDATA[the image is added]]></translation>
+            </item>
+            <item type="message" name="DeletedImages">
+                <translation language="nl"><![CDATA[de afbeeldingen werden verwijderd]]></translation>
+                <translation language="en"><![CDATA[the images are deleted]]></translation>
+            </item>
+            <item type="message" name="SequenceSaved">
+                <translation language="nl"><![CDATA[De volgorde werd opgeslagen]]></translation>
+                <translation language="en"><![CDATA[The sequence is saved]]></translation>
+            </item>
+            <item type="message" name="FilesDeleted">
+                <translation language="nl"><![CDATA[Bestanden verwijderd]]></translation>
+                <translation language="en"><![CDATA[Files deleted]]></translation>
+            </item>
+            <item type="message" name="FileDeleted">
+                <translation language="nl"><![CDATA[Bestand verwijderd]]></translation>
+                <translation language="en"><![CDATA[File deleted]]></translation>
+            </item>
+            <item type="message" name="FileRename">
+                <translation language="nl"><![CDATA[Bestanden hernoemd]]></translation>
+                <translation language="en"><![CDATA[Files renamed]]></translation>
+            </item>
+        </Core>
+    </Backend>
+    <Frontend>
+        <Core>
+        </Core>
+    </Frontend>
+</locale>

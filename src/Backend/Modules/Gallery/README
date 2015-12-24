@@ -1,0 +1,15 @@
+Documentation
+=============
+
+Plupload
+--------
+
+Changes: Js/jquery.ui.plupload
+
+Line 1051: onLast(self.window, 'resize', mpl);
+Line 1051: onLast(self.content, 'resize', mpl);
+
+Changes: Added jquery-ui.css with specific id (#uploader)
+
+
+

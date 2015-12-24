@@ -1,0 +1,37 @@
+/*** GALLERY ***/
+/*ul.galleria-gallery
+{
+    height:128px;
+}*/
+ul.gallery-gallery li
+{
+    margin-bottom: 10px;
+}
+
+ul.gallery-gallery li a
+{
+    border: 0;
+    text-decoration: none;
+}
+
+ul.gallery-widget li:nth-child(n+5)
+{
+    display: none;
+}
+/*** END GALLERY ***/
+
+/*** SLIDESHOW ***/
+ul.gallery-slideshow
+{
+    /*height: 128px;*/
+}
+/*** END SLIDESHOW ***/
+
+button.more-pictures{
+    margin-bottom: 10px;
+}
+
+button.less-pictures{
+    margin-bottom: 10px;
+    display: none;
+}

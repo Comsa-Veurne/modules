@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>media</name>
+	<version>1.0.0</version>
+	<requirements>
+		<minimum_version>3.4</minimum_version>
+	</requirements>
+	<description>
+		<![CDATA[
+			This module can be added to other modules.  With the module, you can add multiple images to the module you like.  You have to alter several files in the selected module:
+			## Backend-action file (for example edit.php)##
+			- create a private property 'media'
+			- in the loadForm-function: $this->media = new BackendMediaHelper($this->frm, (string) $this->getModule(), (int) $this->id, (string) $this->getAction());
+			- in the parse-function: $this->tpl->assign('mediaItems', $this->media->getMediaItems());
+			- in the validateForm-function: $this->media->validate(); (for example after the $this->meta->validate()-call)
+			- in the execute function, add
+			    //--Add data to Javascript
+                $this->header->addCSS('uploadify.css', 'media');
+                $this->header->addJs('jquery.uploadify.min.js', 'media');
+
+                $this->header->addJsData("media", "mediaModule", (string) $this->getModule());
+                $this->header->addJsData("media", "mediaAction", (string) $this->getAction());
+                $this->header->addJsData("media", "mediaId", (int) $this->id);
+
+    		## Backend-template file (for example edit.tpl)##
+            - add a tab: <li><a href="#tabMedia">{$lblMedia|ucfirst}</a></li>
+            - add the container tab: <div id="tabMedia">{include:{$BACKEND_MODULES_PATH}/media/layout/templates/media.tpl}</div>
+
+    		## Frontend-action (or widget) file (for example detail.php)##
+    		- get the media files: FrontendMediaHelper::getFromModule("MODULENAME - CHANGE THIS", $this->record["id"]);
+		]]>
+	</description>
+	<authors>
+		<author>
+			<name><![CDATA[Waldo Cosman]]></name>
+			<url><![CDATA[http://www.comsa.be]]></url>
+		</author>
+        <author>
+            <name><![CDATA[Nick Vandevenne]]></name>
+            <url><![CDATA[http://www.comsa.be]]></url>
+        </author>
+	</authors>
+	<events>
+		<event application="backend" name=""><![CDATA[]]></event>
+	</events>
+</module>

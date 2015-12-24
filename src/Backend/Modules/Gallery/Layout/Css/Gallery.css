@@ -1,0 +1,55 @@
+/*** GALLERIA ***/
+ul.gallery
+{
+    margin-top: 20px;
+}
+
+ul.gallery li
+{
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    float: left;
+    padding: 10px;
+    margin: 0 15px 15px 0;
+    width: 128px;
+    position: relative;
+}
+
+ul.gallery li img
+{
+    cursor: move;
+    width: 128px;
+}
+
+ul.gallery li .filename
+{
+    display: block;
+    height: 40px;
+}
+
+ul.gallery li .check
+{
+    position: absolute;
+    right: 5px;
+    top: 0px;
+}
+
+ul.gallery li .delete
+{
+    width: 114px;
+    text-align: center;
+}
+
+ul.gallery li textarea
+{
+    width: 122px;
+    height: 30px;
+}
+
+span.deleteCheck
+{
+    display: inline-block;
+    padding-top: 3px;
+}
+
+/*** END GALLERIA ***/
