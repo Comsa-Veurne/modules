@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>mailengine</name>
+	<version>1.0.0</version>
+	<requirements>
+		<minimum_version>versionname</minimum_version>
+	</requirements>
+	<description>
+		<![CDATA[
+			
+		]]>
+	</description>
+	<authors>
+		<author>
+			<name><![CDATA[]]></name>
+			<url><![CDATA[]]></url>
+		</author>
+	</authors>
+	<events>
+		<event application="backend" name=""><![CDATA[]]></event>
+	</events>
+</module>

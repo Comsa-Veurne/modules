@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+    <Backend>
+        <Mailengine>
+            <item type="label" name="AddEmail">
+                <translation language="nl"><![CDATA[E-mailadres toevoegen]]></translation>
+                <translation language="en"><![CDATA[Add e-mail]]></translation>
+            </item>
+            <item type="message" name="ShowOnlyUsersInGroup">
+                <translation language="nl"><![CDATA[Toon enkel gebruikers in de groep]]></translation>
+                <translation language="en"><![CDATA[Show only users in group]]></translation>
+            </item>
+            <item type="label" name="FromAddress">
+                <translation language="nl"><![CDATA[Van-adres]]></translation>
+                <translation language="en"><![CDATA[From-address]]></translation>
+            </item>
+            <item type="label" name="ReplyAddress">
+                <translation language="nl"><![CDATA[Reply-adres]]></translation>
+                <translation language="en"><![CDATA[Reply-address]]></translation>
+            </item>
+            <item type="label" name="Reply">
+                <translation language="nl"><![CDATA[Reply]]></translation>
+                <translation language="en"><![CDATA[Reply]]></translation>
+            </item>
+            <item type="label" name="Return">
+                <translation language="nl"><![CDATA[return]]></translation>
+                <translation language="en"><![CDATA[return]]></translation>
+            </item>
+            <item type="label" name="Subject">
+                <translation language="nl"><![CDATA[onderwerp]]></translation>
+                <translation language="en"><![CDATA[subject]]></translation>
+            </item>
+            <item type="label" name="User">
+                <translation language="nl"><![CDATA[gebruiker]]></translation>
+                <translation language="en"><![CDATA[user]]></translation>
+            </item>
+            <item type="label" name="Users">
+                <translation language="nl"><![CDATA[gebruikers]]></translation>
+                <translation language="en"><![CDATA[users]]></translation>
+            </item>
+            <item type="label" name="Css">
+                <translation language="nl"><![CDATA[css]]></translation>
+                <translation language="en"><![CDATA[css]]></translation>
+            </item>
+            <item type="label" name="Stats">
+                <translation language="nl"><![CDATA[statistieken]]></translation>
+                <translation language="en"><![CDATA[stats]]></translation>
+            </item>
+            <item type="label" name="Percentage">
+                <translation language="nl"><![CDATA[percentage]]></translation>
+                <translation language="en"><![CDATA[percent]]></translation>
+            </item>
+            <item type="label" name="Opened">
+                <translation language="nl"><![CDATA[geopend]]></translation>
+                <translation language="en"><![CDATA[opened]]></translation>
+            </item>
+            <item type="label" name="SendDate">
+                <translation language="nl"><![CDATA[verzenddatum]]></translation>
+                <translation language="en"><![CDATA[send date]]></translation>
+            </item>
+            <item type="label" name="MailsSend">
+                <translation language="nl"><![CDATA[mails verstuurd]]></translation>
+                <translation language="en"><![CDATA[mails send]]></translation>
+            </item>
+            <item type="label" name="MailsOpened">
+                <translation language="nl"><![CDATA[mails geopend]]></translation>
+                <translation language="en"><![CDATA[mails opened]]></translation>
+            </item>
+            <item type="label" name="UniqueMailsOpened">
+                <translation language="nl"><![CDATA[unieke mails geopend (per gebruiker)]]></translation>
+                <translation language="en"><![CDATA[unique mails opened]]></translation>
+            </item>
+            <item type="label" name="MailsOpenedByDay">
+                <translation language="nl"><![CDATA[mails geopend per dag]]></translation>
+                <translation language="en"><![CDATA[mails opened by day]]></translation>
+            </item>
+            <item type="label" name="MailsOpenedByHour">
+                <translation language="nl"><![CDATA[mails geopend per uur]]></translation>
+                <translation language="en"><![CDATA[mails opened by hour]]></translation>
+            </item>
+            <item type="label" name="LinksClicked">
+                <translation language="nl"><![CDATA[geklikte links]]></translation>
+                <translation language="en"><![CDATA[links clicked]]></translation>
+            </item>
+            <item type="label" name="LinksClickedTotal">
+                <translation language="nl"><![CDATA[totaal geklikte links]]></translation>
+                <translation language="en"><![CDATA[total links clicked]]></translation>
+            </item>
+            <item type="label" name="LinksClickedByDay">
+                <translation language="nl"><![CDATA[totaal geklikte links]]></translation>
+                <translation language="en"><![CDATA[total links clicked]]></translation>
+            </item>
+            <item type="label" name="LinksClickedTotal">
+                <translation language="nl"><![CDATA[geklikte links per dag]]></translation>
+                <translation language="en"><![CDATA[links clicked by day]]></translation>
+            </item>
+            <item type="label" name="NumberOfLinksClicked">
+                <translation language="nl"><![CDATA[aantal geklikte links]]></translation>
+                <translation language="en"><![CDATA[number of links clicked]]></translation>
+            </item>
+            <item type="label" name="Link">
+                <translation language="nl"><![CDATA[link]]></translation>
+                <translation language="en"><![CDATA[link]]></translation>
+            </item>
+            <item type="label" name="Links">
+                <translation language="nl"><![CDATA[links]]></translation>
+                <translation language="en"><![CDATA[links]]></translation>
+            </item>
+            <item type="label" name="Mailing">
+                <translation language="nl"><![CDATA[Mailing]]></translation>
+                <translation language="en"><![CDATA[Mailing]]></translation>
+            </item>
+            <item type="label" name="Yes">
+                <translation language="nl"><![CDATA[ja]]></translation>
+                <translation language="en"><![CDATA[yes]]></translation>
+            </item>
+            <item type="label" name="No">
+                <translation language="nl"><![CDATA[Nee]]></translation>
+                <translation language="en"><![CDATA[No]]></translation>
+            </item>
+            <item type="label" name="ShowOnWebsite">
+                <translation language="nl"><![CDATA[tonen op website]]></translation>
+                <translation language="en"><![CDATA[show on website]]></translation>
+            </item>
+            <item type="label" name="Click">
+                <translation language="nl"><![CDATA[klik]]></translation>
+                <translation language="en"><![CDATA[click]]></translation>
+            </item>
+            <item type="label" name="Clicks">
+                <translation language="nl"><![CDATA[kliks]]></translation>
+                <translation language="en"><![CDATA[clicks]]></translation>
+            </item>
+            <item type="label" name="Overlay">
+                <translation language="nl"><![CDATA[overlay]]></translation>
+                <translation language="en"><![CDATA[overlay]]></translation>
+            </item>
+            <item type="message" name="ChooseGroups">
+                <translation language="nl">
+                    <![CDATA[Kies de groepen naar waar u de mailing wenst te versturen.]]></translation>
+                <translation language="en">
+                    <![CDATA[Select the groups where you want the mailing to be sent.]]></translation>
+            </item>
+            <item type="message" name="MessageWillBeSent">
+                <translation language="nl"><![CDATA[De mailing zal verstuurd worden naar %1$s %2$s.]]></translation>
+                <translation language="en"><![CDATA[The mailing will be sent to %1$s %2$s.]]></translation>
+            </item>
+            <item type="message" name="MailingReadyToSend">
+                <translation language="nl"><![CDATA[De mailing staat klaar om verstuurd te worden.]]></translation>
+                <translation language="en"><![CDATA[The mailing is ready to be send.]]></translation>
+            </item>
+
+        </Mailengine>
+        <Core>
+            <item type="label" name="Mailengine">
+                <translation language="nl"><![CDATA[mailengine]]></translation>
+                <translation language="en"><![CDATA[mailengine]]></translation>
+            </item>
+            <item type="label" name="Mailings">
+                <translation language="nl"><![CDATA[mailings]]></translation>
+                <translation language="en"><![CDATA[mailings]]></translation>
+            </item>
+            <item type="label" name="Subscribe">
+                <translation language="nl"><![CDATA[inschrijven nieuwsbrief]]></translation>
+                <translation language="en"><![CDATA[subscribe]]></translation>
+            </item>
+            <item type="label" name="ExportUsers">
+                <translation language="nl"><![CDATA[exporteer gebruikers]]></translation>
+                <translation language="en"><![CDATA[export users]]></translation>
+            </item>
+            <item type="label" name="AddUser">
+                <translation language="nl"><![CDATA[gebruiker toevoegen]]></translation>
+                <translation language="en"><![CDATA[add user]]></translation>
+            </item>
+            <item type="label" name="ImportUsers">
+                <translation language="nl"><![CDATA[importeer gebruikers]]></translation>
+                <translation language="en"><![CDATA[import users]]></translation>
+            </item>
+            <item type="label" name="ImportEmails">
+                <translation language="nl"><![CDATA[importeer e-mailadressen]]></translation>
+                <translation language="en"><![CDATA[import e-mails]]></translation>
+            </item>
+            <item type="label" name="FileEmails">
+                <translation language="nl"><![CDATA[bestand met e-mailadressen]]></translation>
+                <translation language="en"><![CDATA[file with e-mails]]></translation>
+            </item>
+            <item type="label" name="ExampleFile">
+                <translation language="nl"><![CDATA[download voorbeeld-bestand]]></translation>
+                <translation language="en"><![CDATA[download example-file]]></translation>
+            </item>
+            <item type="label" name="Download">
+                <translation language="nl"><![CDATA[download]]></translation>
+                <translation language="en"><![CDATA[download]]></translation>
+            </item>
+            <item type="label" name="EmailsAdded">
+                <translation language="nl"><![CDATA[e-mailadressen toegevoegd]]></translation>
+                <translation language="en"><![CDATA[e-mails added]]></translation>
+            </item>
+            <item type="label" name="InvalidEmails">
+                <translation language="nl"><![CDATA[ongeldige e-mailadressen]]></translation>
+                <translation language="en"><![CDATA[invalid e-mails]]></translation>
+            </item>
+            <item type="label" name="EmailsAlreadyExists">
+                <translation language="nl"><![CDATA[reeds bestaande e-mailadressen]]></translation>
+                <translation language="en"><![CDATA[e-mails that already exists]]></translation>
+            </item>
+            <item type="label" name="ImportSucceeded">
+                <translation language="nl"><![CDATA[import geslaagd]]></translation>
+                <translation language="en"><![CDATA[import succeeded]]></translation>
+            </item>
+            <item type="label" name="ImportNewFile">
+                <translation language="nl"><![CDATA[import nieuw bestand]]></translation>
+                <translation language="en"><![CDATA[import new file]]></translation>
+            </item>
+            <item type="label" name="DefaultGroupSubscribe">
+                <translation language="nl"><![CDATA[standaard groep bij inschrijven nieuwsbrief]]></translation>
+                <translation language="en"><![CDATA[default group for subscribing to newsletter]]></translation>
+            </item>
+            <item type="label" name="TestEmail">
+                <translation language="nl"><![CDATA[test e-mail]]></translation>
+                <translation language="en"><![CDATA[test e-mail]]></translation>
+            </item>
+            <item type="label" name="SendTest">
+                <translation language="nl"><![CDATA[test versturen]]></translation>
+                <translation language="en"><![CDATA[send test]]></translation>
+            </item>
+            <item type="message" name="TestEmailSend">
+                <translation language="nl"><![CDATA[de test-mail is verstuurd]]></translation>
+                <translation language="en"><![CDATA[the test mail is send]]></translation>
+            </item>
+            <item type="message" name="MultipleEmail">
+                <translation language="nl">
+                    <![CDATA[je kan meerdere e-mailadressen invoeren door een , tussen de e-mailadressen te plaatsen.]]></translation>
+                <translation language="en">
+                    <![CDATA[you can input several e-mailaddresses by adding a , between the e-mailaddresses]]></translation>
+            </item>
+            <item type="message" name="MailSquares">
+                <translation language="nl">
+                    <![CDATA[Plaats &#91;&#91;MAIL&#93;&#93; waar je de inhoud van de mailing wenst te plaatsen.  De code &#91;&#91;UNSUBSCRIBE&#93;&#93; vertaalt de url die gebruikt wordt om uit te schrijven. Deze moet in de href staan van het link-element vb &lt;a href='&#91;&#91;UNSUBSCRIBE&#93;&#93;'&gt;]]></translation>
+                <translation language="en">
+                    <![CDATA[Add &#91;&#91;MAIL&#93;&#93; to the template where you want to add the text of the mailing.  The code &#91;&#91;UNSUBSCRIBE&#93;&#93; translates the url which is used to unsubscribe. This code must be placed inside the href of the a-element for example: &lt;a href='&#91;&#91;UNSUBSCRIBE&#93;&#93;'&gt;]]]]></translation>
+            </item>
+            <item type="message" name="MailUserVars">
+                <translation language="nl">
+                    <![CDATA[Plaats &#91;&#91;NAME&#93;&#93; waar je de naam van de gebruiker wil tonen en &#91;&#91;EMAIL&#93;&#93; waar je het e-mailadres van de gebruiker wil tonen.]]></translation>
+                <translation language="en">
+                    <![CDATA[Place &#91;&#91;NAME&#93;&#93; where you want to show the users name and &#91;&#91;EMAIL&#93;&#93; where you want to show the e-mail address of the user]]></translation>
+            </item>
+            <item type="label" name="ProfileGroups">
+                <translation language="nl"><![CDATA[Profiel-groepen]]></translation>
+                <translation language="en"><![CDATA[Profile groups]]></translation>
+            </item>
+            <item type="label" name="AllActiveProfiles">
+                <translation language="nl"><![CDATA[Alle actieve profielen]]></translation>
+                <translation language="en"><![CDATA[All active profiles]]></translation>
+            </item>
+            <item type="message" name="ChooseProfileGroups">
+                <translation language="nl"><![CDATA[Kies de profiel-groepen:]]></translation>
+                <translation language="en"><![CDATA[Choose the profile groups:]]></translation>
+            </item>
+            <item type="error" name="NoUsers">
+                <translation language="nl">
+                    <![CDATA[Je hebt geen gebruikers geselecteerd waardoor je de nieuwsbrief niet kunt versturen.]]></translation>
+                <translation language="en"><![CDATA[No uses are selected so you can not send this mail.]]></translation>
+            </item>
+            <item type="label" name="Active">
+                <translation language="nl"><![CDATA[actief]]></translation>
+                <translation language="en"><![CDATA[active]]></translation>
+            </item>
+            <item type="label" name="NotActive">
+                <translation language="nl"><![CDATA[niet actief]]></translation>
+                <translation language="en"><![CDATA[not active]]></translation>
+            </item>
+            <item type="label" name="UnsubscribedOn">
+                <translation language="nl"><![CDATA[uitgeschreven op]]></translation>
+                <translation language="en"><![CDATA[unsubscribed on]]></translation>
+            </item>
+
+        </Core>
+    </Backend>
+    <Frontend>
+        <Core>
+            <item type="action" name="MailengineClick">
+                <translation language="nl"><![CDATA[mailengine-click]]></translation>
+                <translation language="en"><![CDATA[mailengine-click]]></translation>
+            </item>
+            <item type="action" name="Index">
+                <translation language="nl"><![CDATA[index]]></translation>
+                <translation language="en"><![CDATA[index]]></translation>
+            </item>
+            <item type="action" name="MailengineImage">
+                <translation language="nl"><![CDATA[mailengine-image]]></translation>
+                <translation language="en"><![CDATA[mailengine-image]]></translation>
+            </item>
+            <item type="action" name="MailengineSubscribe">
+                <translation language="nl"><![CDATA[subscribe]]></translation>
+                <translation language="en"><![CDATA[subscribe]]></translation>
+            </item>
+            <item type="action" name="MailengineUnsubscribe">
+                <translation language="nl"><![CDATA[unsubscribe]]></translation>
+                <translation language="en"><![CDATA[unsubscribe]]></translation>
+            </item>
+            <item type="action" name="MailengineDetail">
+                <translation language="nl"><![CDATA[detail]]></translation>
+                <translation language="en"><![CDATA[detail]]></translation>
+            </item>
+            <item type="action" name="MailenginePreview">
+                <translation language="nl"><![CDATA[preview]]></translation>
+                <translation language="en"><![CDATA[preview]]></translation>
+            </item>
+            <item type="label" name="Mailing">
+                <translation language="nl"><![CDATA[mailing]]></translation>
+                <translation language="en"><![CDATA[mailing]]></translation>
+            </item>
+            <item type="label" name="BackToMailings">
+                <translation language="nl"><![CDATA[terug naar de andere mailings]]></translation>
+                <translation language="en"><![CDATA[back to the other mails]]></translation>
+            </item>
+            <item type="label" name="UnsubscribeNewsletter">
+                <translation language="nl"><![CDATA[uitschrijven nieuwsbrief]]></translation>
+                <translation language="en"><![CDATA[unsubscribe newsletter]]></translation>
+            </item>
+            <item type="error" name="AlreadySubscribed">
+                <translation language="nl">
+                    <![CDATA[Dit e-mailadres is reeds ingeschreven op de mailing.]]></translation>
+                <translation language="en">
+                    <![CDATA[This e-mail address is already subscribed to the mailinglist.]]></translation>
+            </item>
+            <item type="message" name="SubscribeSuccess">
+                <translation language="nl"><![CDATA[Je bent met succes ingeschreven op de nieuwsbrief.]]></translation>
+                <translation language="en"><![CDATA[You succesfully subscribed to our newsletter.]]></translation>
+            </item>
+            <item type="label" name="SubscribeNewsletter">
+                <translation language="nl"><![CDATA[Inschrijven nieuwsbrief]]></translation>
+                <translation language="en"><![CDATA[Subscribe newsletter]]></translation>
+            </item>
+            <item type="error" name="NotSubscribed">
+                <translation language="nl">
+                    <![CDATA[Dit e-mailadres bestaat niet in ons systeem.]]></translation>
+                <translation language="en">
+                    <![CDATA[This e-mail address doesn't exist in our system.]]></translation>
+            </item>
+        </Core>
+    </Frontend>
+</locale>
