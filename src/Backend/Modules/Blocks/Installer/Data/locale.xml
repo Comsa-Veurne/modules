@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+	<Backend>
+		<Blocks>
+			<item type="label" name="AddBlocks">
+				<translation language="nl"><![CDATA[Blocks toevoegen]]></translation>
+				<translation language="en"><![CDATA[Add blocks]]></translation>
+			</item>
+			<item type="label" name="NumItems">
+				<translation language="nl"><![CDATA[Aantal blokken]]></translation>
+				<translation language="en"><![CDATA[Block count]]></translation>
+			</item>
+			<item type="label" name="InternalLink">
+				<translation language="nl"><![CDATA[Interne link]]></translation>
+				<translation language="en"><![CDATA[Internal link]]></translation>
+			</item>
+			<item type="message" name="HelpExternalRedirect">
+				<translation language="nl"><![CDATA[Hiermee kan je een item in het menu laten doorverwijzen naar een externe website.]]></translation>
+				<translation language="en"><![CDATA[Use this if you need to redirect a menu-item to an external website.]]></translation>
+			</item>
+			<item type="message" name="HelpInternalRedirect">
+				<translation language="nl"><![CDATA[Hiermee kan je een item in het menu laten doorverwijzen naar een andere pagina binnen de website.]]></translation>
+				<translation language="en"><![CDATA[Use this if you need to redirect a menu-item to another page on this website.]]></translation>
+			</item>
+			<item type="label" name="ExternalLink">
+				<translation language="nl"><![CDATA[Externe link]]></translation>
+				<translation language="en"><![CDATA[External link]]></translation>
+			</item>
+		</Blocks>
+		<Core>
+			<item type="label" name="Blocks">
+				<translation language="nl"><![CDATA[Blocks]]></translation>
+				<translation language="en"><![CDATA[Blocks]]></translation>
+			</item>
+			<item type="label" name="BlocksDetail">
+				<translation language="nl"><![CDATA[Blocks detail]]></translation>
+				<translation language="en"><![CDATA[Blocks detail]]></translation>
+			</item>
+			<item type="label" name="BlocksCategory">
+				<translation language="nl"><![CDATA[Blocks categorie]]></translation>
+				<translation language="en"><![CDATA[Blocks category]]></translation>
+			</item>
+			<item type="message" name="NoCategories">
+				<translation language="en"><![CDATA[no categories]]></translation>
+				<translation language="nl"><![CDATA[geen categorieën]]></translation>
+			</item>
+            <item type="label" name="Link">
+                <translation language="en"><![CDATA[Link]]></translation>
+                <translation language="nl"><![CDATA[Link]]></translation>
+            </item>
+            <item type="label" name="Linktext">
+                <translation language="en"><![CDATA[Link-text]]></translation>
+                <translation language="nl"><![CDATA[Link tekst]]></translation>
+            </item>
+		</Core>
+	</Backend>
+	<Frontend>
+		<core>
+		</core>
+	</Frontend>
+</locale>

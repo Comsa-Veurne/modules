@@ -1,0 +1,9 @@
+ul.addresses li span
+{
+    background: url(../../../../core/layout/images/move_handle.gif) no-repeat 0 2px;
+    display: block;
+    float: left;
+    height: 20px;
+    width: 14px;
+    cursor: move;
+}

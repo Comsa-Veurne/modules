@@ -1,0 +1,42 @@
+.block {
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    max-width: 600px;
+    background-position: center;
+    display: block;
+    height: 300px;
+    position: relative;
+    color: #ffffff;
+}
+.block > div {
+    background-color: rgba(233, 119, 14, 0.8);
+    bottom: 0;
+    border-radius: 10px;
+    font-size: 16px;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+}
+.block > div > div {
+    display: table-cell;
+    padding: 15px;
+}
+
+.block > div > a {
+    color: white;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 0;
+    display: table-cell;
+    min-width:25%;
+    vertical-align: middle;
+    background-color: #afbd2c;
+}
+
+.block > div > div > h2 {
+    color: #FFFFFF;
+    font-size: 34px;
+}

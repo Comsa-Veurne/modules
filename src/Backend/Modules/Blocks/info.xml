@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>Blocks</name>
+	<version>1.0.1</version>
+	<requirements>
+		<minimum_version>versionname</minimum_version>
+	</requirements>
+	<description>
+		<![CDATA[Blokken gedeelte om blokken op een website te plaatsen in een bepaalde stijl]]>
+	</description>
+	<authors>
+		<author>
+			<name><![CDATA[Waldo Cosman]]></name>
+			<url><![CDATA[http://www.comsa.be]]></url>
+		</author>
+		<author>
+			<name><![CDATA[Nick Vandevenne]]></name>
+			<url><![CDATA[http://www.comsa.be]]></url>
+		</author>
+	</authors>
+	<events>
+		<event application="backend" name="after_add"><![CDATA[Triggered when a Blocks is added.]]></event>
+		<event application="backend" name="after_delete"><![CDATA[Triggered when a Blocks is deleted.]]></event>
+		<event application="backend" name="after_edit"><![CDATA[Triggered when a Blocks is edited.]]></event>
+		<event application="backend" name="after_saved_settings"><![CDATA[Triggered when settings are saved.]]></event>
+	</events>
+</module>

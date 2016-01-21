@@ -1,0 +1,59 @@
+body {
+    line-height: normal;
+}
+
+.image {
+    margin-bottom: 12px;
+}
+
+.location {
+    margin-top: 10px;
+}
+
+.images, .files, .videos {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.agenda-points {
+    margin-left: 30px;
+    display: list-item;
+}
+
+.agenda-points h4 {
+    font-size: 20px;
+}
+
+.agenda-top-list> div:nth-child(2n+1) {
+    clear: both;
+}
+
+.agenda-top-point {
+    margin-bottom: 20px;
+}
+
+.calandar-icon {
+    height: 100px;
+    padding-top: 10px;
+    background-image: url("../Images/build/icon-calendar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.calandar-icon span {
+    display: block;
+}
+
+.calandar-icon .day {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.calandar-icon .month {
+    margin-top: -10px;
+    font-size: 26px;
+}

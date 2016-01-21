@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+	<Backend>
+		<Addresses>
+            <item type="label" name="Address">
+                <translation language="nl"><![CDATA[adres]]></translation>
+                <translation language="en"><![CDATA[address]]></translation>
+            </item>
+            <item type="label" name="ParentTitle">
+                <translation language="nl"><![CDATA[Hoofdgroep]]></translation>
+                <translation language="en"><![CDATA[Parent group]]></translation>
+            </item>
+		</Addresses>
+		<Core>
+            <item type="label" name="GroupParent">
+                <translation language="nl"><![CDATA[Hoofdgroep]]></translation>
+                <translation language="en"><![CDATA[Parent group]]></translation>
+            </item>
+			<item type="label" name="Addresses">
+				<translation language="nl"><![CDATA[adressen]]></translation>
+				<translation language="en"><![CDATA[addresses]]></translation>
+			</item>
+            <item type="label" name="Firstname">
+                <translation language="nl"><![CDATA[voornaam]]></translation>
+                <translation language="en"><![CDATA[firstname]]></translation>
+            </item>
+            <item type="label" name="Name">
+                <translation language="nl"><![CDATA[naam]]></translation>
+                <translation language="en"><![CDATA[name]]></translation>
+            </item>
+
+            <item type="label" name="Zipcode">
+                <translation language="nl"><![CDATA[postcode]]></translation>
+                <translation language="en"><![CDATA[zipcode]]></translation>
+            </item>
+            <item type="label" name="City">
+                <translation language="nl"><![CDATA[gemeente]]></translation>
+                <translation language="en"><![CDATA[city]]></translation>
+            </item>
+            <item type="label" name="SequenceSaved">
+                <translation language="nl"><![CDATA[Sorteervolgorde werd opgeslagen]]></translation>
+                <translation language="en"><![CDATA[Sequence saved]]></translation>
+            </item>
+            <item type="label" name="Company">
+                <translation language="nl"><![CDATA[Bedrijf]]></translation>
+                <translation language="en"><![CDATA[Company]]></translation>
+            </item>
+            <item type="label" name="Phone">
+                <translation language="nl"><![CDATA[Telefoon]]></translation>
+                <translation language="en"><![CDATA[Phone]]></translation>
+            </item>
+            <item type="label" name="Fax">
+                <translation language="nl"><![CDATA[Fax]]></translation>
+                <translation language="en"><![CDATA[Fax]]></translation>
+            </item>
+            <item type="label" name="Vat">
+                <translation language="nl"><![CDATA[BTW]]></translation>
+                <translation language="en"><![CDATA[Vat]]></translation>
+            </item>
+            <item type="label" name="Assortiment">
+                <translation language="nl"><![CDATA[Assortiment]]></translation>
+                <translation language="en"><![CDATA[Assortiment]]></translation>
+            </item>
+            <item type="label" name="Open">
+                <translation language="nl"><![CDATA[Open]]></translation>
+                <translation language="en"><![CDATA[Open]]></translation>
+            </item>
+            <item type="label" name="OpeningHours">
+                <translation language="nl"><![CDATA[Opensuren]]></translation>
+                <translation language="en"><![CDATA[Openinghours]]></translation>
+            </item>
+            <item type="label" name="Closes">
+                <translation language="nl"><![CDATA[Gesloten]]></translation>
+                <translation language="en"><![CDATA[Closed]]></translation>
+            </item>
+            <item type="label" name="Visit">
+                <translation language="nl"><![CDATA[Bezoek]]></translation>
+                <translation language="en"><![CDATA[Visit]]></translation>
+            </item>
+            <item type="label" name="Size">
+                <translation language="nl"><![CDATA[Grootte]]></translation>
+                <translation language="en"><![CDATA[Size]]></translation>
+            </item>
+            <item type="label" name="Remark">
+                <translation language="nl"><![CDATA[Opmerking]]></translation>
+                <translation language="en"><![CDATA[Remark]]></translation>
+            </item>
+            <item type="message" name="NoAddresses">
+                <translation language="nl"><![CDATA[Er zijn nog geen adressen]]></translation>
+                <translation language="en"><![CDATA[There are no addresses yet]]></translation>
+            </item>
+            <item type="message" name="NoGroups">
+                <translation language="nl"><![CDATA[Er zijn nog geen groepen]]></translation>
+                <translation language="en"><![CDATA[There are no groups yet]]></translation>
+            </item>
+            <item type="message" name="ShowOnlyGroupsUnderGroup">
+                <translation language="nl"><![CDATA[Toon enkel groepen van]]></translation>
+                <translation language="en"><![CDATA[Only show groups from]]></translation>
+            </item>
+            <item type="action" name="Group">
+                <translation language="nl"><![CDATA[groep]]></translation>
+                <translation language="en"><![CDATA[group]]></translation>
+            </item>
+		</Core>
+	</Backend>
+	<Frontend>
+		<Core>
+            <item type="action" name="Group">
+                <translation language="nl"><![CDATA[groep]]></translation>
+                <translation language="en"><![CDATA[group]]></translation>
+                <translation language="fr"><![CDATA[group]]></translation>
+            </item>
+            <item type="action" name="Control">
+                <translation language="nl"><![CDATA[control]]></translation>
+                <translation language="en"><![CDATA[control]]></translation>
+                <translation language="fr"><![CDATA[control]]></translation>
+            </item>
+            <item type="label" name="Address">
+                <translation language="nl"><![CDATA[Adres]]></translation>
+                <translation language="en"><![CDATA[Addresse]]></translation>
+                <translation language="fr"><![CDATA[Address]]></translation>
+            </item>
+            <item type="label" name="MoreInfo">
+                <translation language="nl"><![CDATA[Meer info]]></translation>
+                <translation language="en"><![CDATA[Plus d'info]]></translation>
+                <translation language="fr"><![CDATA[More info]]></translation>
+            </item>
+            <item type="label" name="Zipcode">
+                <translation language="nl"><![CDATA[Postcode]]></translation>
+                <translation language="en"><![CDATA[Code postal]]></translation>
+                <translation language="fr"><![CDATA[Zipcode]]></translation>
+            </item>
+            <item type="label" name="Company">
+                <translation language="nl"><![CDATA[Bedrijf]]></translation>
+                <translation language="en"><![CDATA[Company]]></translation>
+                <translation language="fr"><![CDATA[Company]]></translation>
+            </item>
+            <item type="label" name="Phone">
+                <translation language="nl"><![CDATA[Telefoon]]></translation>
+                <translation language="en"><![CDATA[Phone]]></translation>
+                <translation language="fr"><![CDATA[Téléphone]]></translation>
+            </item>
+            <item type="label" name="Companyname">
+                <translation language="nl"><![CDATA[Bedrijfsnaam]]></translation>
+                <translation language="en"><![CDATA[Nom de l'entreprise]]></translation>
+                <translation language="fr"><![CDATA[Companyname]]></translation>
+            </item>
+            <item type="label" name="Vat">
+                <translation language="nl"><![CDATA[Btw]]></translation>
+                <translation language="en"><![CDATA[Vat]]></translation>
+                <translation language="fr"><![CDATA[Vat]]></translation>
+            </item>
+            <item type="label" name="Assort">
+                <translation language="nl"><![CDATA[Assortiment]]></translation>
+                <translation language="en"><![CDATA[group]]></translation>
+                <translation language="fr"><![CDATA[group]]></translation>
+            </item>
+            <item type="label" name="Open">
+                <translation language="nl"><![CDATA[Open]]></translation>
+                <translation language="en"><![CDATA[Open]]></translation>
+                <translation language="fr"><![CDATA[Open]]></translation>
+            </item>
+            <item type="label" name="Closed">
+                <translation language="nl"><![CDATA[Gesloten]]></translation>
+                <translation language="en"><![CDATA[Closed]]></translation>
+                <translation language="fr"><![CDATA[Closed]]></translation>
+            </item>
+            <item type="label" name="Fax">
+                <translation language="nl"><![CDATA[Fax]]></translation>
+                <translation language="en"><![CDATA[Fax]]></translation>
+            </item>
+            <item type="label" name="Group">
+                <translation language="nl"><![CDATA[groep]]></translation>
+                <translation language="en"><![CDATA[group]]></translation>
+                <translation language="fr"><![CDATA[group]]></translation>
+            </item>
+            <item type="label" name="Visit">
+                <translation language="nl"><![CDATA[Te bezoeken]]></translation>
+                <translation language="en"><![CDATA[Visit]]></translation>
+                <translation language="fr"><![CDATA[Visit]]></translation>
+            </item>
+            <item type="label" name="Size">
+                <translation language="nl"><![CDATA[Grootte]]></translation>
+                <translation language="en"><![CDATA[Size]]></translation>
+                <translation language="fr"><![CDATA[Size]]></translation>
+            </item>
+            <item type="label" name="ChangeData">
+                <translation language="nl"><![CDATA[Gegevens wijzigen]]></translation>
+                <translation language="en"><![CDATA[Change data]]></translation>
+                <translation language="fr"><![CDATA[Change data]]></translation>
+            </item>
+            <item type="label" name="Remark">
+                <translation language="nl"><![CDATA[Opmerking]]></translation>
+                <translation language="en"><![CDATA[Remark]]></translation>
+            </item>
+            <item type="label" name="Info">
+                <translation language="nl"><![CDATA[Informatie]]></translation>
+                <translation language="en"><![CDATA[Information]]></translation>
+            </item>
+            <item type="label" name="BackToOverview">
+                <translation language="nl"><![CDATA[Terug naar overzicht]]></translation>
+                <translation language="en"><![CDATA[Back to overview]]></translation>
+            </item>
+            <item type="label" name="Find">
+                <translation language="nl"><![CDATA[Zoeken]]></translation>
+                <translation language="en"><![CDATA[Search]]></translation>
+            </item>
+            <item type="message" name="ChangesSend">
+                <translation language="nl"><![CDATA[De gegevens zullen worden aangepast.]]></translation>
+                <translation language="en"><![CDATA[The changes will be made]]></translation>
+                <translation language="fr"><![CDATA[The changes will be made]]></translation>
+            </item>
+            <item type="message" name="SearchFor">
+                <translation language="nl"><![CDATA[U hebt gezocht op]]></translation>
+                <translation language="en"><![CDATA[You've searched for]]></translation>
+                <translation language="fr"><![CDATA[Vous avez recherché]]></translation>
+            </item>
+            <item type="message" name="NumberResults">
+                <translation language="nl"><![CDATA[Aantal gevonden resultaten:]]></translation>
+                <translation language="en"><![CDATA[Number of results:]]></translation>
+                <translation language="fr"><![CDATA[Nombre de matches:]]></translation>
+            </item>
+		</Core>
+	</Frontend>
+</locale>

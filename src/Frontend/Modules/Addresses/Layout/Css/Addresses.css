@@ -1,0 +1,44 @@
+.dropdown-menu{
+    width: 96%;
+    margin: -1px 2% !important;
+}
+
+.checkboxes input{
+    width: auto;
+    display: inline-block;
+}
+.checkboxes label{
+    margin-bottom: 6px;
+}
+
+.checkboxes li{
+    display:inline;
+    margin: 0px 10px;
+}
+
+#search .form-control{
+   margin-bottom: 3px;
+}
+
+#search .multiselect{
+    margin-bottom: 3px;
+}
+
+dl dt:after {
+    content: '\003A';
+}
+dl dt.empty:after {
+    content: '';
+}
+
+.dl-horizontal dt {
+    width: inherit !important;
+    text-align: left;
+    padding-right: 5px;
+}
+
+.dl-horizontal dd {
+    margin-left: 0 !important;
+}
+
+
