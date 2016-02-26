@@ -8,6 +8,16 @@ ul.media li {
     position: relative;
 }
 
+ul.videos li {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    float: left;
+    padding: 10px;
+    margin: 0 15px 15px 0;
+    width: 300px;
+    position: relative;
+}
+
 ul.media li label {
     font-size: 9px;
 }
@@ -17,6 +27,11 @@ ul.media li img {
 }
 
 ul.media li .filename {
+    display: block;
+    height: 40px;
+}
+
+ul.media li .filename-norename {
     display: block;
     height: 40px;
 }
@@ -40,6 +55,16 @@ ul.media li .delete {
 
 ul.media li textarea {
     width: 122px;
+    height: 30px;
+}
+
+ul.videos li .delete {
+    width: 286px;
+    text-align: center;
+}
+
+ul.videos li textarea {
+    width: 294px;
     height: 30px;
 }
 

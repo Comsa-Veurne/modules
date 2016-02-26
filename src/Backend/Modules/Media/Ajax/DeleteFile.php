@@ -53,7 +53,7 @@ class DeleteFile extends AjaxAction
                         if($fs->exists($path .'Images/' . $folder['dirname'] . '/' . $media['filename']))
                             $fs->remove($path .'Images/' . $folder['dirname'] . '/' . $media['filename']);
                     }
-                }else
+                }else if($media['filetype'] == 2)
                 {
                     if($fs->exists($path .'Files/' . $media['filename']))
                         $fs->remove($path .'Files/' . $media['filename']);

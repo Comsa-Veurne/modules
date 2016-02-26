@@ -10,6 +10,21 @@
         </div>
     </div>
 
+    <div class="box">
+        <div class="heading">
+            <h3>
+                <label for="type">{$lblAddVideos|ucfirst}</label>
+            </h3>
+        </div>
+        <div class="options">
+{*            <label>{$lblVideoType|ucfirst}:</label>
+            {$mediaItems.field_video_type}*}
+            <label>{$lblVideoUrl|ucfirst}:</label>
+            {$mediaItems.field_video}
+                <a href="" id="addVideo" class="button icon iconAdd" style="float:right;"><span>{$lblAddVideo|ucfirst}</span></a>
+        </div>
+    </div>
+
     <div class="buttonHolderRight clearfix" style="margin: 10px 0;">
         <a href="" id="addLink" class="button icon iconAdd"><span>{$lblAddLink|ucfirst}</span></a>
     </div>
@@ -39,7 +54,19 @@
             </ul>
         </div>
     </div>
-
+    <div class="clearfix">&nbsp;</div>
+    <div class="box">
+        <div class="heading">
+            <h3>{$lblVideos|ucfirst}</h3>
+        </div>
+        <div class="box">
+            <ul class="media videos">
+                {option:mediaItems.videos}
+                    {include:{$BACKEND_MODULES_PATH}/Media/Layout/Templates/Ajax/Video.tpl}
+                {/option:mediaItems.videos}
+            </ul>
+        </div>
+    </div>
     <div class="clearfix">&nbsp;</div>
     <div>
         <span class="deleteCheck">

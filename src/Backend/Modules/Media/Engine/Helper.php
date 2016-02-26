@@ -145,7 +145,7 @@ class Helper
 														WHERE mm.module = ? AND mm.other_id = ? AND mm.type = ?
 														ORDER BY mm.sequence ASC", array($this->module, $this->id, $this->type)
         );
-        $recordsImages = $recordsFiles = array();
+        $recordsImages = $recordsFiles = $recordsVideos = array();
         //--Loop records
         if (!empty($records))
         {
@@ -167,19 +167,39 @@ class Helper
                     }
                     $recordsImages[] = $row;
                 }
-                else
+                else if($row['filetype'] == 2)
                 {
                     //--Get name without extention
                     $path_parts = pathinfo(FRONTEND_FILES_PATH . '/Media/Files/' . $row['filename']);
                     $row['url'] = FRONTEND_FILES_URL . '/Media/Files/' . $row['filename'];
                     $row['name'] = $path_parts['filename'];
                     $recordsFiles[] = $row;
+                }else if($row['filetype'] == 3){
+                    switch($row['extension']){
+                        //youtube
+                        case 0:
+                            $row['video_html'] = '<iframe id="ytplayer" type="text/html" width="100%" src="http://www.youtube.com/embed/' . $row['filename'] . '?autoplay=0" frameborder="0"></iframe>';
+                            break;
+                        //vimeo
+                        case 1:
+                            $row['video_html'] = '<iframe src="//player.vimeo.com/video/'. $row['filename'] .'" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+                            break;
+                        //vine
+                        case 2:
+                            $row['video_html'] = '<iframe src="https://vine.co/v/'. $row['filename'] .'/embed/postcard" width="100%" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>';
+                            break;
+                        default:
+                            $row['video_html'] = "";
+                            break;
+                    }
+                    $recordsVideos[] = $row;
                 }
             }
         }
 
         $this->mediaItems['images'] = $recordsImages;
         $this->mediaItems['files'] = $recordsFiles;
+        $this->mediaItems['videos'] = $recordsVideos;
     }
 
     /**
@@ -198,6 +218,11 @@ class Helper
         //--Add image field
         $this->field = $this->frm->addFile('images');
 
+        $this->mediaItems['field_video'] = $this->frm->addText('video')->parse();
+
+        $this->mediaItems['field_video_type'] = $this->frm->addDropdown('video_type', array(0 => 'YouTube', 1 => 'Vimeo', 2 => 'Vine'))->parse();
+
+
         //--Check if mediaItems is empty
         if (!empty($this->mediaItems['images']))
         {
@@ -214,6 +239,15 @@ class Helper
         {
             //--Loop the images and create checkbox
             foreach ($this->mediaItems['files'] as &$row)
+            {
+                //$row['chkDelete'] = $this->frm->addCheckbox("file-" . $row["id"])->parse();
+                $row['txtText'] = $this->frm->addTextarea("text-" . $row["id"], $row['text'])->setAttribute('style', 'resize: none;')->parse();
+            }
+        }
+        if (!empty($this->mediaItems['videos']))
+        {
+            //--Loop the images and create checkbox
+            foreach ($this->mediaItems['videos'] as &$row)
             {
                 //$row['chkDelete'] = $this->frm->addCheckbox("file-" . $row["id"])->parse();
                 $row['txtText'] = $this->frm->addTextarea("text-" . $row["id"], $row['text'])->setAttribute('style', 'resize: none;')->parse();
@@ -595,5 +629,30 @@ class Helper
         $all['images'] = $recordsImages;
         $all['files'] = $recordsFiles;
         return $all;
+    }
+
+    public function AddVideo($type, $id)
+    {
+        //--Check if the file is an image or file
+        $item = array();
+        $item["filename"] = $id;
+        $item["extension"] = $type;
+        $item["created_on"] = BackendModel::getUTCDate('Y-m-d H:i:s');
+        $item["filesize"] = 0;
+        $item["filetype"] = 3;
+        //--Serialize data
+        //$item["data"] = serialize($data);
+        //--Store item so we can access it
+        $this->item = $item;
+        //--Insert into media
+        $media_id = BackendModel::getContainer()->get('database')->insert("media", $item);
+
+        $this->item['media_id'] = $media_id;
+        $this->item["text"] = "";
+
+        //--Link the
+        $this->item['id'] = $this->linkMediaToModule($media_id);
+
+        return $media_id;
     }
 }

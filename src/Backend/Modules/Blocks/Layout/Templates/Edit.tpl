@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="options">
                                     {option:item.image}
-                                        <p><img src="{$FRONTEND_FILES_URL}/blocks/image/128x128/{$item.image}"/></p>
+                                        <p><img src="{$FRONTEND_FILES_URL}/Blocks/image/128x128/{$item.image}"/></p>
                                     {/option:item.image}
                                     <p>
                                         {$fileImage} {$fileImageError}

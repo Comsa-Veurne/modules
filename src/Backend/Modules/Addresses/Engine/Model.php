@@ -363,7 +363,7 @@ class Model
 
         $data['created_on'] = BackendModel::getUTCDate();
 
-        $data['id'] = (int)BackendModel::getContainer()->get('database')->insert('addresses_groups', $data);
+        $data['id'] = (int)$db->insert('addresses_groups', $data);
 
         // build extra for the gallery-widget
         $extra = array('module' => 'Addresses', 'type' => 'widget', 'label' => 'Addresses', 'action' => 'ShowAddresses', 'data' => serialize(array('id' => $data['id'], 'extra_label' => "Addresses " . $data['title']/*, 'language' => $data['language']*/, 'edit_url' => BackendModel::createURLForAction('edit_group') . '&id=' . $data['id'])), 'hidden' => 'N', 'sequence' => $db->getVar(
@@ -397,7 +397,7 @@ class Model
 
         if (isset($data['extra_id']) && $data['extra_id'] != 0) {
             // build extra
-            $extra = array('id' => $data['extra_id'], 'module' => 'Addresses', 'type' => 'widget', 'label' => 'Addresses', 'action' => 'ShowAddresses', 'data' => serialize(array('id' => $data['id'], 'extra_label' => $data['title']/*, 'language' => $data['language']*/, 'edit_url' => BackendModel::createURLForAction('edit_group') . '&id=' . $data['id'])), 'hidden' => 'N');
+            $extra = array('id' => $data['extra_id'], 'module' => 'Addresses', 'type' => 'widget', 'label' => 'Addresses', 'action' => 'ShowAddresses', 'data' => serialize(array('id' => $data['id'], 'extra_label' => "Addresses " . $data['title']/*, 'language' => $data['language']*/, 'edit_url' => BackendModel::createURLForAction('edit_group') . '&id=' . $data['id'])), 'hidden' => 'N');
 
             // update extra
             $db->update('modules_extras', $extra, 'id = ? ', array($data['extra_id']));

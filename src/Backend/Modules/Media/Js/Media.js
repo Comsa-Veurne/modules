@@ -14,8 +14,7 @@
 jsBackend.Media =
 {
     // constructor
-    init: function ()
-    {
+    init: function () {
         //--Initialise uploadify
         //jsBackend.Media.uploadify();
         jsBackend.Media.bindSortable();
@@ -24,14 +23,11 @@ jsBackend.Media =
         jsBackend.Media.bindRenameFile();
         jsBackend.Media.plupload();
 
-        $('#all-images').click(function ()
-        {
-            if ($(this).prop('checked') == true)
-            {
+        $('#all-images').click(function () {
+            if ($(this).prop('checked') == true) {
                 $('input[class^=check]').prop('checked', true);
             }
-            else
-            {
+            else {
                 $('input[class^=check]').prop('checked', false);
             }
         })
@@ -53,8 +49,7 @@ jsBackend.Media =
             },
             width: dWidth,
             height: dHeight,
-            open: function (event, ui)
-            {
+            open: function (event, ui) {
                 $("body").css({
                     overflow: 'hidden'
                 });
@@ -64,16 +59,14 @@ jsBackend.Media =
                     filter: "Alpha(Opacity=50)",
                 });
             },
-            beforeClose: function (event, ui)
-            {
+            beforeClose: function (event, ui) {
                 $("#encloser").removeClass('ui-widget-overlay')
                 $("body").css({overflow: 'inherit'})
             }
         });
 
         $('#addLink').click(
-            function (e)
-            {
+            function (e) {
                 e.preventDefault();
                 $("#dialog").dialog("open");
 
@@ -84,21 +77,17 @@ jsBackend.Media =
                         data: {
                             fork: {action: 'GetLink', module: 'Media'},
                         },
-                        success: function (data, textStatus)
-                        {
+                        success: function (data, textStatus) {
                             //--Check if the response is correct
-                            if (data.code == 200)
-                            {
+                            if (data.code == 200) {
                                 $("#dialog").html('');
                                 $("#dialog").append(data.data);
 
-                                $("#linkSearch").keyup(function ()
-                                {
+                                $("#linkSearch").keyup(function () {
 
                                     var that = this, $allListElements = $("#dialog").find('ul > li');
 
-                                    var $matchingListElements = $allListElements.filter(function (i, li)
-                                    {
+                                    var $matchingListElements = $allListElements.filter(function (i, li) {
                                         var listItemText = $(li).text().toUpperCase(), searchText = that.value.toUpperCase();
                                         return ~listItemText.indexOf(searchText);
                                     });
@@ -115,8 +104,7 @@ jsBackend.Media =
 
                                         var ids = [];
                                         var lis = $('.checkLink:checked');
-                                        lis.each(function ()
-                                        {
+                                        lis.each(function () {
                                             ids.push(this.id);
                                         });
                                         $.ajax(
@@ -129,11 +117,9 @@ jsBackend.Media =
                                                     'mediaId': jsData.Media.mediaId,
                                                     'mediaType': jsData.Media.mediaType
                                                 },
-                                                success: function (data, textStatus)
-                                                {
+                                                success: function (data, textStatus) {
                                                     //--Check if the response is correct
-                                                    if (data.code == 200)
-                                                    {
+                                                    if (data.code == 200) {
                                                         // Called when all files are either uploaded or failed
                                                         //--Generate random number for the refresh
                                                         var randomNumber = Math.floor(Math.random() * 11)
@@ -146,14 +132,12 @@ jsBackend.Media =
                                                     }
 
                                                     //--If there is an error, alert the message
-                                                    if (data.code != 200 && jsBackend.debug)
-                                                    {
+                                                    if (data.code != 200 && jsBackend.debug) {
                                                         alert(data.message);
                                                     }
 
                                                 },
-                                                error: function (XMLHttpRequest, textStatus, errorThrown)
-                                                {
+                                                error: function (XMLHttpRequest, textStatus, errorThrown) {
                                                     // revert
                                                     $(this).sortable('cancel');
 
@@ -161,8 +145,7 @@ jsBackend.Media =
                                                     jsBackend.messages.add('error', 'adding files failed.');
 
                                                     // alert the user
-                                                    if (jsBackend.debug)
-                                                    {
+                                                    if (jsBackend.debug) {
                                                         alert(textStatus);
                                                     }
                                                 }
@@ -172,13 +155,11 @@ jsBackend.Media =
                             }
 
                             //--If there is an error, alert the message
-                            if (data.code != 200 && jsBackend.debug)
-                            {
+                            if (data.code != 200 && jsBackend.debug) {
                                 alert(data.message);
                             }
                         },
-                        error: function (XMLHttpRequest, textStatus, errorThrown)
-                        {
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
                             // revert
                             $(this).sortable('cancel');
 
@@ -186,17 +167,83 @@ jsBackend.Media =
                             jsBackend.messages.add('error', 'get link failed.');
 
                             // alert the user
-                            if (jsBackend.debug)
-                            {
+                            if (jsBackend.debug) {
                                 alert(textStatus);
                             }
                         }
                     });
             }
         );
+
+        $('#addVideo').click(
+            function (e) {
+                e.preventDefault();
+
+                $.ajax(
+                    {
+                        data: {
+                            fork: {action: 'AddVideo', module: 'Media'},
+                            'video':$('#video').val(),
+                            'mediaModule': jsData.Media.mediaModule,
+                            'mediaAction': jsData.Media.mediaAction,
+                            'mediaId': jsData.Media.mediaId,
+                            'mediaType': jsData.Media.mediaType
+                        },
+                        success: function (resp, textStatus) {
+                            //--Check if the response is correct
+                            if (resp.code == 200) {
+                                $('#video').val('');
+
+                                var data = resp.data;
+
+                                if (data[0] == 3) {
+                                    $('.videos').append(data[1]);
+                                }
+
+                                var id = $(data[1]).attr('id');
+
+                                $('#' + id).find('.delete').click(
+                                    function (e)				// on stop sorting
+                                    {
+                                        e.preventDefault();
+                                        deleteF(this);
+                                    });
+
+                                $('#' + id).find('.filename').click(
+                                    function (e) {
+                                        e.preventDefault();
+                                        rename(this);
+                                    }
+                                );
+
+                                // Called when all files are either uploaded or failed
+                                //--Generate random number for the refresh
+                                //var randomNumber = Math.floor(Math.random() * 11)
+                            }
+
+                            //--If there is an error, alert the message
+                            if (resp.code != 200 && jsBackend.debug) {
+                                alert(data.message);
+                            }
+
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            // revert
+                            $(this).sortable('cancel');
+
+                            // show message
+                            jsBackend.messages.add('error', 'adding video failed.');
+
+                            // alert the user
+                            if (jsBackend.debug) {
+                                alert(textStatus);
+                            }
+                        }
+                    })
+            }
+        );
     },
-    uploadify: function ()
-    {
+    uploadify: function () {
         $('#images').uploadify({
             'swf': '/src/Backend/Modules/Media/Swf/uploadify.swf',
             'buttonText': jsBackend.locale.lbl('ChooseImages'),
@@ -213,8 +260,7 @@ jsBackend.Media =
                 'mediaType': jsData.Media.mediaType
             },
             'fileObjName': 'images',
-            'onQueueComplete': function (queueData)
-            {
+            'onQueueComplete': function (queueData) {
                 //--Generate random number for the refresh
                 var randomNumber = Math.floor(Math.random() * 11)
 
@@ -226,8 +272,7 @@ jsBackend.Media =
             }
         });
     },
-    bindSortable: function ()
-    {
+    bindSortable: function () {
         //--Add sortable to the galleria-lists
         $('ul.media').sortable(
             {
@@ -238,8 +283,7 @@ jsBackend.Media =
                     var arrIds = Array();
 
                     //--Loop the children
-                    $(this).children('li').each(function (index, element)
-                    {
+                    $(this).children('li').each(function (index, element) {
                         //--Get the id from the element and push it into an array
                         arrIds.push($(element).attr('id').substr(3));
                     });
@@ -254,23 +298,19 @@ jsBackend.Media =
                                 fork: {action: 'MediaSequence', module: 'Media'},
                                 ids: strIds
                             },
-                            success: function (data, textStatus)
-                            {
+                            success: function (data, textStatus) {
                                 //--Check if the response is correct
-                                if (data.code == 200)
-                                {
+                                if (data.code == 200) {
                                     jsBackend.messages.add('success', jsBackend.locale.msg('SequenceSaved'));
                                 }
 
                                 //--If there is an error, alert the message
-                                if (data.code != 200 && jsBackend.debug)
-                                {
+                                if (data.code != 200 && jsBackend.debug) {
                                     alert(data.message);
                                 }
 
                             },
-                            error: function (XMLHttpRequest, textStatus, errorThrown)
-                            {
+                            error: function (XMLHttpRequest, textStatus, errorThrown) {
                                 // revert
                                 $(this).sortable('cancel');
 
@@ -278,8 +318,7 @@ jsBackend.Media =
                                 jsBackend.messages.add('error', 'alter sequence failed.');
 
                                 // alert the user
-                                if (jsBackend.debug)
-                                {
+                                if (jsBackend.debug) {
                                     alert(textStatus);
                                 }
                             }
@@ -287,8 +326,7 @@ jsBackend.Media =
                 }
             });
     },
-    plupload: function ()
-    {
+    plupload: function () {
         var uploader = $("#uploader").plupload({
             // General settings
             runtimes: 'html5,flash,html4',
@@ -350,8 +388,7 @@ jsBackend.Media =
 
             init: {
 
-                UploadComplete: function (up, files)
-                {
+                UploadComplete: function (up, files) {
                     // Called when all files are either uploaded or failed
                     //--Generate random number for the refresh
                     var randomNumber = Math.floor(Math.random() * 11)
@@ -362,16 +399,13 @@ jsBackend.Media =
                     //--Redirect page with randomnumber + #tabMedia identifier
                     //window.location.replace(strLocation + "&random=" + randomNumber + "#tabMedia");
                 },
-                FileUploaded: function (up, files, response)
-                {
+                FileUploaded: function (up, files, response) {
                     var data = JSON.parse(response.response).data;
 
-                    if (data[0] == 1)
-                    {
+                    if (data[0] == 1) {
                         $('.images').append(data[1]);
                     }
-                    else
-                    {
+                    else {
                         $('.files').append(data[1]);
                     }
 
@@ -385,8 +419,7 @@ jsBackend.Media =
                         });
 
                     $('#' + id).find('.filename').click(
-                        function (e)
-                        {
+                        function (e) {
                             e.preventDefault();
                             rename(this);
                         }
@@ -395,8 +428,7 @@ jsBackend.Media =
             },
         });
     },
-    bindDeleteFile: function ()
-    {
+    bindDeleteFile: function () {
         //--Add sortable to the galleria-lists
         $('.delete').click(
             function (e)				// on stop sorting
@@ -405,8 +437,7 @@ jsBackend.Media =
                 deleteF(this);
             });
     },
-    bindDeleteFiles: function ()
-    {
+    bindDeleteFiles: function () {
         $('.deleteSelected').click(
             function (e)				// on stop sorting
             {
@@ -418,8 +449,7 @@ jsBackend.Media =
                 var ids = [];
 
                 var lis = $('.check:checked').parent();
-                lis.children('.delete').each(function ()
-                {
+                lis.children('.delete').each(function () {
                     ids.push(this.id);
                 });
                 //--Create ajax-call
@@ -432,8 +462,7 @@ jsBackend.Media =
                         buttons: [
                             {
                                 text: utils.string.ucfirst(jsBackend.locale.lbl('OK')),
-                                click: function ()
-                                {
+                                click: function () {
                                     // unbind the beforeunload event
                                     $(window).off('beforeunload');
 
@@ -444,24 +473,20 @@ jsBackend.Media =
                                                 fork: {action: 'DeleteFiles', module: 'Media'},
                                                 ids: ids
                                             },
-                                            success: function (data, textStatus)
-                                            {
+                                            success: function (data, textStatus) {
                                                 //--Check if the response is correct
-                                                if (data.code == 200)
-                                                {
+                                                if (data.code == 200) {
                                                     lis.remove();
                                                     jsBackend.messages.add('success', jsBackend.locale.msg('FilesDeleted'));
                                                 }
 
                                                 //--If there is an error, alert the message
-                                                if (data.code != 200 && jsBackend.debug)
-                                                {
+                                                if (data.code != 200 && jsBackend.debug) {
                                                     alert(data.message);
                                                 }
 
                                             },
-                                            error: function (XMLHttpRequest, textStatus, errorThrown)
-                                            {
+                                            error: function (XMLHttpRequest, textStatus, errorThrown) {
                                                 // revert
                                                 $(this).sortable('cancel');
 
@@ -469,8 +494,7 @@ jsBackend.Media =
                                                 jsBackend.messages.add('error', 'delete failed.');
 
                                                 // alert the user
-                                                if (jsBackend.debug)
-                                                {
+                                                if (jsBackend.debug) {
                                                     alert(textStatus);
                                                 }
                                             }
@@ -479,14 +503,12 @@ jsBackend.Media =
                             },
                             {
                                 text: utils.string.ucfirst(jsBackend.locale.lbl('Cancel')),
-                                click: function ()
-                                {
+                                click: function () {
                                     $(this).dialog('close');
                                 }
                             }
                         ],
-                        open: function (e)
-                        {
+                        open: function (e) {
                             // set focus on first button
                             if ($(this).next().find('button').length > 0) $(this).next().find('button')[0].focus();
                         }
@@ -495,11 +517,9 @@ jsBackend.Media =
                 $('#' + mid).dialog('open');
             });
     },
-    bindRenameFile: function ()
-    {
+    bindRenameFile: function () {
         $('.filename').click(
-            function (e)
-            {
+            function (e) {
                 e.preventDefault();
                 rename(this);
             }
@@ -509,8 +529,7 @@ jsBackend.Media =
 
 $(jsBackend.Media.init);
 
-function rename(elem)
-{
+function rename(elem) {
     var input = $('<input />', {
         'type': 'text',
         'name': 'unique',
@@ -522,13 +541,11 @@ function rename(elem)
         'style': 'display:block; min-height:40px;'
     });
     input.blur(
-        function (e)
-        {
+        function (e) {
             var elemSet = $('<span />');
             elemSet.attr('style', 'display: block; height: 40px;');
             elemSet.click(
-                function (e)
-                {
+                function (e) {
                     e.preventDefault();
                     rename(this);
                 });
@@ -539,11 +556,9 @@ function rename(elem)
                         id: $(this).parents().eq(2).find('.delete').attr('id'),
                         name: $(this).val()
                     },
-                    success: function (data, textStatus)
-                    {
+                    success: function (data, textStatus) {
                         //--Check if the response is correct
-                        if (data.code == 200)
-                        {
+                        if (data.code == 200) {
                             elemSet.parent().parent().find('.url').attr("href", data.data);
 
                             jsBackend.messages.add('success', jsBackend.locale.msg('FileRename'));
@@ -551,14 +566,12 @@ function rename(elem)
                         }
 
                         //--If there is an error, alert the message
-                        if (data.code != 200 && jsBackend.debug)
-                        {
+                        if (data.code != 200 && jsBackend.debug) {
                             alert(data.message);
                         }
 
                     },
-                    error: function (XMLHttpRequest, textStatus, errorThrown)
-                    {
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
                         // revert
                         $(this).sortable('cancel');
 
@@ -566,8 +579,7 @@ function rename(elem)
                         jsBackend.messages.add('error', 'rename failed.');
 
                         // alert the user
-                        if (jsBackend.debug)
-                        {
+                        if (jsBackend.debug) {
                             alert(textStatus);
                         }
                     }
@@ -582,8 +594,7 @@ function rename(elem)
     input.focus();
 }
 
-function deleteF(elem)
-{
+function deleteF(elem) {
     var mid = $(elem).data('messageId');
 
     var id = $(elem).attr('id');
@@ -597,8 +608,7 @@ function deleteF(elem)
             buttons: [
                 {
                     text: utils.string.ucfirst(jsBackend.locale.lbl('OK')),
-                    click: function ()
-                    {
+                    click: function () {
                         // unbind the beforeunload event
                         $(window).off('beforeunload');
 
@@ -609,24 +619,20 @@ function deleteF(elem)
                                     fork: {action: 'DeleteFile', module: 'Media'},
                                     id: id
                                 },
-                                success: function (data, textStatus)
-                                {
+                                success: function (data, textStatus) {
                                     //--Check if the response is correct
-                                    if (data.code == 200)
-                                    {
+                                    if (data.code == 200) {
                                         li.parent().remove();
                                         jsBackend.messages.add('success', jsBackend.locale.msg('FileDeleted'));
                                     }
 
                                     //--If there is an error, alert the message
-                                    if (data.code != 200 && jsBackend.debug)
-                                    {
+                                    if (data.code != 200 && jsBackend.debug) {
                                         alert(data.message);
                                     }
 
                                 },
-                                error: function (XMLHttpRequest, textStatus, errorThrown)
-                                {
+                                error: function (XMLHttpRequest, textStatus, errorThrown) {
                                     // revert
                                     $(this).sortable('cancel');
 
@@ -634,8 +640,7 @@ function deleteF(elem)
                                     jsBackend.messages.add('error', 'delete failed.');
 
                                     // alert the user
-                                    if (jsBackend.debug)
-                                    {
+                                    if (jsBackend.debug) {
                                         alert(textStatus);
                                     }
                                 }
@@ -644,14 +649,12 @@ function deleteF(elem)
                 },
                 {
                     text: utils.string.ucfirst(jsBackend.locale.lbl('Cancel')),
-                    click: function ()
-                    {
+                    click: function () {
                         $(this).dialog('close');
                     }
                 }
             ],
-            open: function (e)
-            {
+            open: function (e) {
                 // set focus on first button
                 if ($(this).next().find('button').length > 0) $(this).next().find('button')[0].focus();
             }
